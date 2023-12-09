@@ -3,9 +3,7 @@ plugins {
 }
 
 sourceSets {
-    main {
-        kotlin.srcDir("src")
-    }
+    main { }
 }
 
 tasks {

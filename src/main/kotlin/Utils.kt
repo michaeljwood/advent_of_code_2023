@@ -6,7 +6,14 @@ import kotlin.io.path.readLines
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = Path("src/$name.txt").readLines()
+fun readInput(name: String) = Path("src/main/resources/$name.txt").readLines()
+
+/**
+ * Validates the test case data, and prints out a message with the received and expected values if it fails.
+ */
+fun validateTestCase(calculated: Any, expected: Any) {
+    check(calculated == expected) { "Expected '$calculated' to equal '$expected'" }
+}
 
 /**
  * Converts string to md5 hash.
